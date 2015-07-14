@@ -1,0 +1,62 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    
+    <title>Wrestling time!</title>
+    <meta name="description" content="Fight of the day">
+    <meta name="author" content="Matej Janacek">
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="main sumo">
+        <div class="luchador first">
+            <div class="text">1P</div>
+            <div class="hpbar"></div>
+            <div class="playerImage"></div>
+            <div class="hitAnimation"></div>
+            <div class="playerLabel"></div>
+            <div class="cooldown"></div>
+            <div class="controls">
+                <div><span>A</span> - punch</div>
+                <div><span>S</span> - block</div>
+                <div><span>D</span> - kick</div>
+            </div>
+        </div>
+        
+        <div class="vs text">
+            <span>VS</span>
+            <div class="ready">Press SPACE to start!</div>
+        </div>
+        
+        <div class="luchador second">
+            <div class="text">2P</div>
+            <div class="hpbar"></div>
+            <div class="playerImage"></div>
+            <div class="hitAnimation"></div>
+            <div class="playerLabel"></div>
+            <div class="cooldown"></div>
+            <div class="controls">
+                <div><span>J</span> - punch</div>
+                <div><span>K</span> - block</div>
+                <div><span>L</span> - kick</div>
+            </div>
+        </div>
+                
+        <div class="log"></div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="js/players.js"></script>
+    <script src="js/moves.js"></script>
+    <script src="js/colors.js"></script>
+    <script src="js/log.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/playerLoader.js"></script>
+    <script src="js/playerPicker.js"></script>
+</body>
+</html>

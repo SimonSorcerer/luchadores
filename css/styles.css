@@ -1,0 +1,246 @@
+* {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #555;
+	color: #FFF;
+	font-size: 1.2em;
+	font-family: Verdana, sans-serif;
+}
+
+.main {
+	position: relative;
+	width: 400px;
+	min-width: 800px;
+	height: 600px;
+	margin-top: 100px;
+}
+
+.luchador {
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	top: 60px;
+	background-color: #000;
+	cursor: pointer;
+}
+
+.luchador.first {
+	left: 100px;
+}
+
+.luchador.second {
+	left: 600px;
+}
+
+.luchador .playerLabel {
+	width: 120px;
+	padding: 0.2em 0;
+	position: absolute;
+	background: rgba(0, 0, 0, 1);
+	line-height: 1em;
+	height: 1em;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	font-size: 0.6em;
+}
+
+.luchador .hpbar {
+	position: absolute;
+	width: 120px;
+	height: 8px;
+	top: -9px;
+	left: 0;
+	border-bottom: 1px solid #000;
+	background: #00dc06; /* Old browsers */
+	background: -moz-linear-gradient(left,  #dc0000 0, #dcdc00 65px, #00dc06 120px); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0,#dc0000), color-stop(65px,#dcdc00), color-stop(120px,#00dc06)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #dc0000 0,#dcdc00 65px,#00dc06 120px); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #dc0000 0,#dcdc00 65px,#00dc06 120px); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #dc0000 0,#dcdc00 65px,#00dc06 120px); /* IE10+ */
+	background: linear-gradient(to right,  #dc0000 0,#dcdc00 65px,#00dc06 120px); /* W3C */
+}
+
+.luchador .cooldown {
+	position: absolute;
+	width: 120px;
+	height: 4px;
+	top: 121px;
+	left: 0;
+	background: #c9b05d;
+}
+
+.luchador .hitAnimation {
+	opacity: 0;
+	position: absolute;
+	width: 120px;
+	height: 120px;
+	line-height: 120px;
+	top: 0;
+	left: 0;
+	color: #dc0000;
+	text-align: center;
+	font-size: 4.4em;
+	z-index: 20;
+}
+
+.luchador .controls {
+	position: absolute;
+	top: 132px;
+	font-size: 0.7em;
+	color: #BBB;
+}
+
+.luchador .controls div {
+	margin: 4px 12px;
+}
+
+.luchador .controls span {
+	border: 1px solid #333;
+	background-color: #888;
+	color: #000;
+	border-radius: 4px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+}
+
+.text {
+	font-size: 4.4em;
+	font-family: tahoma, sans-serif;
+	color: #300;
+	position: absolute;
+	width: 120px;
+	text-align: center;
+}
+
+.luchador .text {
+	top: -120px;
+}
+
+.vs {
+	width: 320px;
+	height: 120px;
+	position: absolute;
+	top: 60px;
+	left: 252px;
+	text-align: center;
+}
+
+.vs .ready {
+	display: none;
+	font-size: 0.16em;
+	font-family: sans-serif;
+	font-weight: normal;
+	color: #BBB;
+}
+
+.fight {
+	width: 100%;
+	height: 150px;
+	position: absolute;
+	left: 0;
+	bottom: 40px;
+	text-align: center;
+	cursor: pointer;
+	z-index: 50;
+}
+
+.log {
+	display: normal;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 300px;
+	height: 160px;
+	position: absolute;
+	top: 200px;
+	left: 252px;
+	padding: 8px;
+	color: #BBB;
+	font-size: 0.6em;
+	z-index: 0;
+	overflow-y: auto;
+}
+
+.log p {
+	padding: 2px 0;
+}
+
+.colorLog {
+	color: #999;
+}
+
+.colorGame {
+	color: #9B9;
+}
+
+.colorRed {
+	color: #B40;
+}
+
+.colorBlue {
+	color: #06B;
+}
+
+.picker {
+	position: absolute;
+	width: 120px;
+	height: 240px;
+	top: 100%;
+	left: 0;
+	z-index: 100;
+}
+
+.picker .avatar {
+	float: left;
+	background-color: #222;
+}
+
+.picker img {
+	display: block;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+.picker img:hover {
+	-webkit-filter: none;
+	filter: none;
+}
+
+.blink_me {
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+
+    -moz-animation-name: blinker;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+    animation-name: blinker;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@-moz-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
